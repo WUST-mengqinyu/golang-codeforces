@@ -1,8 +1,3 @@
-/**************************************************
- * Author: badcw
- * Time: 2020/3/17 16:54
-**************************************************/
-
 package main
 
 import (
@@ -24,7 +19,6 @@ const (
 )
 
 func main() {
-
 	close(channelType)
 	oWg.Wait()
 	out.Flush()
@@ -55,6 +49,7 @@ func init() {
 		}
 	}()
 }
+
 func scanString() string { in.Scan(); return in.Text() }
 func scanInt(a *int)     { *a, _ = strconv.Atoi(scanString()) }
 func scanInts(a ...*int) {
